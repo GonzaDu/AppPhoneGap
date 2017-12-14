@@ -1,0 +1,6 @@
+http://www.vetbossel.in/phonegap-crud-operation-app-using-php-mysql/
+
+https://codesundar.com/lesson/phonegap-login-system-using-php-mysql/
+
+https://framework7.io/docs/form-ajax-submit.html
+
