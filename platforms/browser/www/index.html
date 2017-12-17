@@ -10,9 +10,8 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
-
-    <!-- Required meta tags-->
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+     Required meta tags-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -92,7 +91,7 @@
                                     <div class="item-inner">
                                       <div class="item-title label">Contraseña</div>
                                       <div class="item-input">
-                                        <input type="email" id="contrasena" placeholder="contraseña">
+                                        <input type="text" id="contrasena" placeholder="contraseña">
                                       </div>
                                     </div>
                                   </div>
@@ -157,7 +156,7 @@
                               </ul>
                             </div>
                             <div class="content-block">
-                                <button id="login" class="button">Login</button>
+                                <button id="insert" class="button">Login</button>
                               </div>
                         </form>
                             <!-- Link to another page -->
@@ -178,6 +177,7 @@
     </div>
 
     <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
     <script type="text/javascript" src="js/my-app.js"></script>
 </body>

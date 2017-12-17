@@ -42,34 +42,32 @@ $$(document).on('pageInit', '.page[data-page="about"]', function (e) {
     myApp.alert('Here comes About page');
 })
 
-$$("#login").click(function(){
-    var usuario=$("#usuario").val();
-    var contrasena=$("#contrasena").val();
-    var dataString="usuario="+usuario+"&contrasena="+contrasena+"&password="+password+"&signup=";
-    if($.trim(fullname).length>0 & $.trim(email).length>0 & $.trim(password).length>0)
-    {
-    $.ajax({
-    type: "POST",
-    url: url,
-    data: dataString,
-    crossDomain: true,
-    cache: false,
-    beforeSend: function(){ $("#signup").val('Connecting...');},
-    success: function(data){
-    if(data=="success")
-    {
-    alert("Thank you for Registering with us! you can login now");
-    }
-    else if(data="exist")
-    {
-    alert("Hey! You alreay has account! you can login with us");
-    }
-    else if(data="failed")
-    {
-    alert("Something Went wrong");
-    }
-    }
-    });
-    }return false;
-    });
+
+$("#insert").click(function(){
+var name=$("#usuario").val();
+var position=$("#usuario").val();
+var dataString="usuario="+name+"&amp;contrasena="+position+"&amp;insert=";
+
+$.ajax({
+type: "POST",
+url:"https://gonza.000webhostapp.com/InsertarUsuarioPhone.php",
+data: dataString,
+crossDomain: true,
+cache: false,
+beforeSend: function(){ $("#insert").val('Connecting...');},
+success: function(data){
+if(data=="success")
+{
+alert("inserted");
+$("#insert").val('submit');
+}
+else if(data=="error")
+{
+alert("error");
+}
+}
+});
+
+});
+
 
