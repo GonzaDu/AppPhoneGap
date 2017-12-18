@@ -44,9 +44,9 @@ $$(document).on('pageInit', '.page[data-page="about"]', function (e) {
 
 
 $("#insert").click(function(){
-var name=$("#usuario").val();
-var position=$("#usuario").val();
-var dataString="usuario="+name+"&amp;contrasena="+position+"&amp;insert=";
+var usuario=$("#usuario").val();
+var contrasena = $("#contrasena").val();
+var dataString="usuario="+usuario+"&contrasena="+contrasena+"&insert=";
 
 $.ajax({
 type: "POST",
